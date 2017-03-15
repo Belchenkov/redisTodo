@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Belchenkov/redisTodo/issues"
   },
-  "homepage": "https://github.com/Belchenkov/redisTodo#readme"
+  "homepage": "https://github.com/Belchenkov/redisTodo#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "redis": "^2.7.1"
+  }
 }
