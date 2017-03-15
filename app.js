@@ -15,7 +15,7 @@ client.on('connect', function() {
 
 // View Engine
 app.set('views', path.join(__dirname, 'views'));
-app.set('view_engine', 'ejs');
+app.set('view engine', 'ejs');
 
 // Body-parser
 app.use(bodyParser.json());
@@ -26,7 +26,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routs
 app.get('/', function(req, res) {
-    res.send('<h2>HOME</h2>');
+    var title = 'Redis TodoList';
+
+    client.lrange('todos', 0, -1, function(err, reply) {
+        res.render('index', {
+            title: title,
+            todos: reply
+        });
+    });
+
+
 });
 
 app.listen(3000, function() {
