@@ -1,0 +1,19 @@
+{
+  "name": "redistodos",
+  "version": "1.0.0",
+  "description": "Simple Todo List On Redis",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Belchenkov/redisTodo.git"
+  },
+  "author": "Aleksey Belchenkov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Belchenkov/redisTodo/issues"
+  },
+  "homepage": "https://github.com/Belchenkov/redisTodo#readme"
+}
