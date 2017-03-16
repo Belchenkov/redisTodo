@@ -19,3 +19,15 @@ input[type='text'] {
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 20px;
 }
+
+input[type='submit'] {
+    margin-top: 15px;
+    padding: 20px 35px;
+}
+
+#qwe {
+    transform: scale(2);
+    opacity: 0.9;
+    cursor: pointer;
+    margin-right: 15px;
+}

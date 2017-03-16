@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= title %></title>
 
-    <link rel="stylesheet" href="http://bootswatch.com/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="http://bootswatch.com/readable/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -18,9 +18,16 @@
             <input type="text" class="form-control" name="todo" placeholder="Добавить задачу ..." /><br><br>
         </form>
 
-        <% todos.forEach(function(todo) { %>
-            <div class="well"><%= todo %></div>
-        <% }) %>
+        <form action="/todo/delete" method="post">
+            
+            <% todos.forEach(function(todo) { %>
+                <div class="well">
+                    <input type="checkbox"id="qwe" class="delete" name="todos" value="<%= todo %>" />
+                    <%= todo %>
+                </div>
+            <% }) %>
+            <input type="submit" value="Удалить" class="btn btn-danger pull-right" />
+        </form>
     </div>
 </body>
 </html>

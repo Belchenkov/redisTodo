@@ -52,6 +52,25 @@ app.post('/todo/add', function(req, res, next) {
     });
 });
 
+app.post('/todo/delete', function(req, res, next) {
+    var delTodos = req.body.todos;
+
+    client.lrange('todos', 0, -1, function(err, todos) {
+        for (var i = 0; i < todos.length; i++) {
+            if (delTodos.indexOf(todos[i]) > -1) {
+                client.lrem('todos', 0, todos[i], function() {
+                    if (err) {
+                        console.log();
+                    }
+                });
+            }
+        }
+
+        res.redirect('/');
+    });
+});
+
+
 app.listen(3000, function() {
     console.log('Server starded on localhost:3000');
 });
