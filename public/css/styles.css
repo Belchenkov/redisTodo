@@ -1,0 +1,21 @@
+/* === Fonts === */
+
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+body {
+    background: url('../images/mooning.png');
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 2.3em;
+    margin-bottom: 20px;
+}
+
+input[type='text'] {
+    padding: 30px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+}
